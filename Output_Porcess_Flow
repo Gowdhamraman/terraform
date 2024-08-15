@@ -434,3 +434,244 @@ public_ips = [
   "54.164.191.226",
   "52.33.125.147",
 ]
+
+
+
+
+*************************************************************************************************************************************************
+
+
+PS C:\Users\LENOVO\Downloads\Terraform-Task> terraform destroy
+aws_instance.us_east_1: Refreshing state... [id=i-0fc1c6193c8a635fc]
+aws_instance.us_west_2: Refreshing state... [id=i-0da8e382d40a78b6d]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.us_east_1 will be destroyed
+  - resource "aws_instance" "us_east_1" {
+      - ami                                  = "ami-0ae8f15ae66fe8cda" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:581148087917:instance/i-0fc1c6193c8a635fc" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1c" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0fc1c6193c8a635fc" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0c52cbcaee1acca36" -> null
+      - private_dns                          = "ip-172-31-19-154.ec2.internal" -> null
+      - private_ip                           = "172.31.19.154" -> null
+      - public_dns                           = "ec2-54-164-191-226.compute-1.amazonaws.com" -> null
+      - public_ip                            = "54.164.191.226" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [
+          - "default",
+        ] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-07c83a0d441b7054c" -> null
+      - tags                                 = {
+          - "Name" = "Server_us_east_1"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "Server_us_east_1"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0da63ecdb1eb08034",
+        ] -> null
+        # (8 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0176106b474fb3d70" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # aws_instance.us_west_2 will be destroyed
+  - resource "aws_instance" "us_west_2" {
+      - ami                                  = "ami-0a38c1c38a15fed74" -> null
+      - arn                                  = "arn:aws:ec2:us-west-2:581148087917:instance/i-0da8e382d40a78b6d" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-west-2a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0da8e382d40a78b6d" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0bb72add149036038" -> null
+      - private_dns                          = "ip-172-31-24-122.us-west-2.compute.internal" -> null
+      - private_ip                           = "172.31.24.122" -> null
+      - public_dns                           = "ec2-52-33-125-147.us-west-2.compute.amazonaws.com" -> null
+      - public_ip                            = "52.33.125.147" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [
+          - "default",
+        ] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0ddf0121c6392a2e5" -> null
+      - tags                                 = {
+          - "Name" = "Server_us_west_2"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "Server_us_west_2"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-08501dd812835f1fe",
+        ] -> null
+        # (8 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-03e824c1d070c4f58" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+Plan: 0 to add, 0 to change, 2 to destroy.
+
+Changes to Outputs:
+  - instance_ids = [
+      - "i-0fc1c6193c8a635fc",
+      - "i-0da8e382d40a78b6d",
+    ] -> null
+  - public_ips   = [
+      - "54.164.191.226",
+      - "52.33.125.147",
+    ] -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.us_east_1: Destroying... [id=i-0fc1c6193c8a635fc]
+aws_instance.us_west_2: Destroying... [id=i-0da8e382d40a78b6d]
+aws_instance.us_east_1: Still destroying... [id=i-0fc1c6193c8a635fc, 10s elapsed]
+aws_instance.us_west_2: Still destroying... [id=i-0da8e382d40a78b6d, 10s elapsed]
+aws_instance.us_east_1: Still destroying... [id=i-0fc1c6193c8a635fc, 20s elapsed]
+aws_instance.us_west_2: Still destroying... [id=i-0da8e382d40a78b6d, 20s elapsed]
+aws_instance.us_east_1: Still destroying... [id=i-0fc1c6193c8a635fc, 30s elapsed]
+aws_instance.us_west_2: Still destroying... [id=i-0da8e382d40a78b6d, 30s elapsed]
+aws_instance.us_east_1: Still destroying... [id=i-0fc1c6193c8a635fc, 40s elapsed]
+aws_instance.us_west_2: Still destroying... [id=i-0da8e382d40a78b6d, 40s elapsed]
+aws_instance.us_east_1: Destruction complete after 43s
+aws_instance.us_west_2: Destruction complete after 44s
+
+Destroy complete! Resources: 2 destroyed.
+PS C:\Users\LENOVO\Downloads\Terraform-Task> 
