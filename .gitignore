@@ -3,6 +3,7 @@
 **/.terraform/*
 .idea
 .gitignore
+Terraform-Nginx.iml
 # .tfstate files
 *.tfstate
 *.tfstate.*
