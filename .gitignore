@@ -4,6 +4,7 @@
 .idea
 .gitignore
 Terraform-Nginx.iml
+.terraform.lock.hcl
 # .tfstate files
 *.tfstate
 *.tfstate.*

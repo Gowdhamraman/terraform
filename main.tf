@@ -21,6 +21,13 @@ resource "aws_instance" "us_east_1" {
   provisioner "file" {
     source      = "path/to/your/index.html"
     destination = "/tmp/index.html"
+
+    connection {
+      type        = "ssh"
+      user        = "ec2-user"
+      private_key = file(var.private_key_path1)
+      host        = self.public_ip
+    }
   }
 
   provisioner "remote-exec" {
@@ -45,7 +52,7 @@ resource "aws_instance" "ap_south_1" {
   instance_type = var.instance_type
 
   tags = {
-    Name = "WebServerIndia"
+    Name = "WebServerAP"
   }
 
   key_name = var.key_name2
@@ -61,6 +68,13 @@ resource "aws_instance" "ap_south_1" {
   provisioner "file" {
     source      = "path/to/your/index.html"
     destination = "/tmp/index.html"
+
+    connection {
+      type        = "ssh"
+      user        = "ec2-user"
+      private_key = file(var.private_key_path2)
+      host        = self.public_ip
+    }
   }
 
   provisioner "remote-exec" {
