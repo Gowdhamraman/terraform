@@ -1,0 +1,7 @@
+instance_type      = "t2.micro"
+key_name1           = "21042024.pem"
+key_name2           = "ap-south-1a.pem"
+ami_us             = "ami-0ae8f15ae66fe8cda"
+ami_ap_south_1     = "ami-0a4408457f9a03be3"
+private_key_path1   = "C:\Users\LENOVO\Downloads\Terraform-Nginx\21042024.pem"
+private_key_path2  =  "C:\Users\LENOVO\Downloads\Terraform-Nginx\ap-south-1a.pem"
